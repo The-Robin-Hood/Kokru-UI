@@ -20,8 +20,9 @@ class _NewsLayoutState extends State<NewsLayout> {
   String category = 'HeadLines';
 
   getNews() async {
-    var url = Uri.parse(
-        'https://newsapi.org/v2/top-headlines?country=in&apiKey=f78f1e687ee14c3da7dbaaa5265014cf');
+    //Enter API KEY from NEWSAPI
+    var url =
+        Uri.parse('https://newsapi.org/v2/top-headlines?country=in&apiKey=');
     var response = await http.get(url);
     Map results = json.decode(response.body);
     setState(() {
